@@ -31,14 +31,13 @@
             android:name=".DailyPlanActivity"
             android:exported="false" />
         <activity
-            android:name=".HistoryActivity"
-            android:exported="false" />
-        <activity
             android:name=".ProfileActivity"
             android:exported="false" />
         <activity
             android:name=".MealPlannerActivity"
             android:exported="false" />
+        <activity android:name=".MealHistoryActivity"
+            android:exported="false"/>
         <activity
             android:name=".HomeActivity"
             android:exported="true">

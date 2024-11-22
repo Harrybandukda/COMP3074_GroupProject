@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,11 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
     android:background="@color/green_acc"
     tools:context=".HistoryActivity">
 
-    <!--    Tool Bar    -->
+    <!--    Nav Bar    -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -101,9 +99,6 @@
                         android:layout_marginTop="10dp"
                         android:gravity="center"
                         android:orientation="vertical"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:onClick="toMealHistoryList"
                         android:background="@drawable/rounded_linear_layout">
 
                         <TextView
@@ -112,6 +107,7 @@
                             android:gravity="center"
                             android:text="@string/total_meals"
                             android:textSize="20sp"
+                            android:onClick="toMealHistoryList"
                             android:textStyle="bold"/>
 
                         <TextView
@@ -133,7 +129,6 @@
                         android:gravity="center"
                         android:orientation="vertical"
                         android:clickable="true"
-                        android:onClick="toAvgDailyCalories"
                         android:background="@drawable/rounded_linear_layout">
 
                         <TextView
@@ -142,6 +137,7 @@
                             android:gravity="center"
                             android:text="@string/avg_daily_calories"
                             android:textSize="20sp"
+                            android:onClick="toAvgDailyCalories"
                             android:textStyle="bold"/>
 
                         <TextView
@@ -156,17 +152,15 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/common_meal"
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
                         android:layout_marginTop="20dp"
                         android:gravity="center"
                         android:orientation="vertical"
-                        android:clickable="true"
-                        android:onClick="toMostCommonMeal"
                         android:background="@drawable/rounded_linear_layout">
 
                         <TextView
+                            android:id="@+id/common_meal"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
@@ -186,15 +180,12 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@id/streak"
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
                         android:layout_marginTop="20dp"
-                        android:layout_marginBottom="5dp"
                         android:gravity="center"
                         android:orientation="vertical"
                         android:clickable="true"
-                        android:onClick="toStreak"
                         android:background="@drawable/rounded_linear_layout">
 
                         <TextView
@@ -202,11 +193,40 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="@string/streak"
+                            android:onClick="toStreak"
                             android:textSize="20sp"
                             android:textStyle="bold"/>
 
                         <TextView
                             android:id="@+id/streak_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center"
+                            android:text="@string/placeholder"
+                            android:textColor="@color/green"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:background="@drawable/rounded_linear_layout">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/recommendations"
+                            android:textSize="20sp"
+                            android:onClick="toRecommendations"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/top_recomendation"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
@@ -254,6 +274,7 @@
                             android:backgroundTint="@color/green"
                             android:layout_centerVertical="true"
                             android:text="reset"
+                            android:onClick="resetFilters"
                             android:layout_alignParentEnd="true"/>
                     </RelativeLayout>
 

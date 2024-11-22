@@ -11,13 +11,13 @@
         android:id="@+id/btnDailyPlan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/daily_plan"
+        android:text="daily_plan"
         android:onClick="openDailyPlan" />
 
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/log_in"
+        android:text="log_in"
         android:onClick="openLogin" />
 </LinearLayout>
