@@ -33,4 +33,28 @@
     <string name="previous_week">←</string>
     <string name="next_week">→</string>
     <string name="ingredients">Ingredients:</string>
+
+    <string name="meal_history_title">Meal History</string>
+    <string name="total_meals">Total Meals</string>
+    <string name="placeholder">placeholder</string>
+    <string name="avg_daily_calories">Avg. Daily Calories</string>
+    <string name="most_common_meal">Most Common Meal</string>
+    <string name="streak">Streak</string>
+    <string name="filters">Filters</string>
+    <string name="yyyy_mm_dd">YYYY-MM-DD</string>
+    <string name="recommendations">Recommendations</string>
+
+    <string-array name="meal_types">
+        <item>All Meal Types</item>
+        <item>Takeout</item>
+        <item>Vegetarian</item>
+    </string-array>
+
+    <string-array name="calorie_range">
+        <item>Full Range</item>
+        <item>less than 1600 </item>
+        <item>1600 to 2000</item>
+        <item>2000 to 3000</item>
+        <item>greater than 3000</item>
+    </string-array>
 </resources>

@@ -15,19 +15,18 @@ import androidx.core.view.WindowInsetsCompat;
 import java.util.ArrayList;
 import java.util.List;
 
-
-public class RecommendationsActivity extends AppCompatActivity {
+public class MealHistoryActivity extends AppCompatActivity {
 
     private ListView listView;
-    private List<String> items = new ArrayList<>();
+    private List<String > items = new ArrayList<>();
     private ArrayAdapter<String> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_recommendations);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.recommendations_layout_id), (v, insets) -> {
+        setContentView(R.layout.activity_total_meals);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.meals_total), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
@@ -37,15 +36,11 @@ public class RecommendationsActivity extends AppCompatActivity {
         items.add("Quinoa Salad");
         items.add("Grilled Salmon");
 
-        listView = findViewById(R.id.recommendationsList);
+        listView = findViewById(R.id.mealHistoryList);
 
         // initialize the array adapter and set it for listview
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, items);
         listView.setAdapter(adapter);
-    }
-
-    private void getRecommendationsFromDB(){
-        // Actually call db here but for now
     }
 
 
