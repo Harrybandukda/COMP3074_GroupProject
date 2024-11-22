@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">COMP3074_GroupProject</string>
+
+    <string name="home">Home</string>
+    <string name="meal_planner">Meal Planner</string>
+    <string name="profile">Profile</string>
+    <string name="history">History</string>
+    <string name="healthy_food_decider">Healthy Food Decider</string>
+    <string name="make_healthier_food_choices_effortlessly">Make Healthier Food Choices, Effortlessly.</string>
+    <string name="your_personal_nutrition_assistant_that_helps_you_plan_track_and_improve_your_eating_habits">Your personal nutrition assistant that helps you plan, track, and improve your eating habits.</string>
+    <string name="start_planning_your_meals">Start Planning Your Meals</string>
 </resources>
