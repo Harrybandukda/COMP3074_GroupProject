@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tvMealName" type="id" />
+    <item name="tvIngredients" type="id" />
+    <item name="tvInstructions" type="id" />
+    <item name="tvNutrition" type="id" />
+    <item name="btnClose" type="id" />
+</resources>
