@@ -17,6 +17,15 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_home);
+
+        findViewById(R.id.btnStartPlanning).setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                // Navigate to Meal Planner Activity
+                Intent intent = new Intent(HomeActivity.this, MealPlannerActivity.class);
+                startActivity(intent);
+            }
+        });
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -24,15 +33,23 @@ public class HomeActivity extends AppCompatActivity {
         });
     }
 
-    public void openMealPlanner(View view) {
-        startActivity(new Intent(this, MealPlannerActivity.class));
+    // Navigation bar methods
+    public void navigateToHome(View view) {
+        // Do nothing, as the user is already on the Home page
     }
 
-    public void openProfile(View view) {
-        startActivity(new Intent(this, ProfileActivity.class));
+    public void navigateToMealPlanner(View view) {
+        Intent intent = new Intent(this, MealPlannerActivity.class);
+        startActivity(intent);
     }
 
-    public void openHistory(View view) {
-        startActivity(new Intent(this, HistoryActivity.class));
+    public void navigateToProfile(View view) {
+        Intent intent = new Intent(this, ProfileActivity.class);
+        startActivity(intent);
+    }
+
+    public void navigateToHistory(View view) {
+        Intent intent = new Intent(this, HistoryActivity.class);
+        startActivity(intent);
     }
 }
