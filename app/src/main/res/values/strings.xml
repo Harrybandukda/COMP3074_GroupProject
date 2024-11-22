@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">COMP3074_GroupProject</string>
+    <string name="meal_planner">Meal Planner</string>
+    <string name="profile">Profile</string>
+    <string name="history">History</string>
+    <string name="recipes">Recipes</string>
+    <string name="log_in_screen">Log In Screen</string>
+    <string name="preference_screen">Preference Screen</string>
+    <string name="recipes_screen">Recipes Screen</string>
+    <string name="recommendations_screen">Recommendations Screen</string>
+    <string name="summary_screen">Summary Screen</string>
+    <string name="daily_plan">Daily Plan</string>
+    <string name="log_in">Log In</string>
 </resources>
