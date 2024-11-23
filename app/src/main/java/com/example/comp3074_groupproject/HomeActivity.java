@@ -52,4 +52,10 @@ public class HomeActivity extends AppCompatActivity {
         Intent intent = new Intent(this, HistoryActivity.class);
         startActivity(intent);
     }
+
+    // Meet the team
+    public void navigateToTeam(View view) {
+        Intent intent = new Intent(this, TeamActivity.class);
+        startActivity(intent);
+    }
 }
