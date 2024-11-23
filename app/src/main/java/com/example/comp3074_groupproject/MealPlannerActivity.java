@@ -71,4 +71,25 @@ public class MealPlannerActivity extends AppCompatActivity {
         intent.putExtra(Intent.EXTRA_TEXT, "Here's my meal plan for the week. Stay healthy!");
         startActivity(Intent.createChooser(intent, "Send Email"));
     }
+
+    // Navigation bar methods
+    public void navigateToHome(View view) {
+        Intent intent = new Intent(this, HomeActivity.class);
+        startActivity(intent);
+    }
+
+    public void navigateToMealPlanner(View view) {
+        Intent intent = new Intent(this, MealPlannerActivity.class);
+        startActivity(intent);
+    }
+
+    public void navigateToProfile(View view) {
+        Intent intent = new Intent(this, ProfileActivity.class);
+        startActivity(intent);
+    }
+
+    public void navigateToHistory(View view) {
+        Intent intent = new Intent(this, HistoryActivity.class);
+        startActivity(intent);
+    }
 }
