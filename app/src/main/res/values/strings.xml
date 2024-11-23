@@ -43,6 +43,17 @@
     <string name="filters">Filters</string>
     <string name="yyyy_mm_dd">YYYY-MM-DD</string>
     <string name="recommendations">Recommendations</string>
+    <string name="comp3074_group_project_group_18">COMP3074 Group Project - Group 18</string>
+    <string name="meet_the_team">Meet The Team</string>
+    <string name="anna_shibanova">Anna Shibanova</string>
+    <string name="student_number_101399925">Student Number: 101399925</string>
+    <string name="oleg_chystieiev">Oleg Chystieiev</string>
+    <string name="student_number_101447469">Student Number: 101447469</string>
+    <string name="nicole_milmine">Nicole Milmine</string>
+    <string name="student_number_101462077">Student Number: 101462077</string>
+    <string name="mo_harry_bandukda">Mo Harry Bandukda</string>
+    <string name="student_number_101451857">Student Number: 101451857</string>
+    <string name="return_to_home">Return to Home</string>
 
     <string-array name="meal_types">
         <item>All Meal Types</item>
