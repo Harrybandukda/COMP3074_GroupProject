@@ -9,58 +9,8 @@
     tools:context=".HistoryActivity">
 
     <!--    Nav Bar    -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@color/green"
-        android:padding="10dp"
-        android:elevation="4dp">
-
-        <TextView
-            android:id="@+id/navHome"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="@string/home"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:onClick="navigateToHome" />
-
-        <TextView
-            android:id="@+id/navMealPlanner"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="@string/meal_planner"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:onClick="navigateToMealPlanner" />
-
-        <TextView
-            android:id="@+id/navProfile"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="@string/profile"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:onClick="navigateToProfile" />
-
-        <TextView
-            android:id="@+id/navHistory"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="@string/history"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:onClick="navigateToHistory" />
-    </LinearLayout>
+    <include
+        layout="@layout/nav_bar" />
 
     <ScrollView
         android:layout_width="match_parent"
