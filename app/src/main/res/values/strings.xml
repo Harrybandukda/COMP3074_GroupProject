@@ -43,6 +43,7 @@
     <string name="filters">Filters</string>
     <string name="yyyy_mm_dd">YYYY-MM-DD</string>
     <string name="recommendations">Recommendations</string>
+    <string name="edit">Edit</string>
 
     <string-array name="meal_types">
         <item>All Meal Types</item>
