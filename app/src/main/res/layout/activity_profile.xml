@@ -215,6 +215,7 @@
             app:cardCornerRadius="16dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/dp_flow_parent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
@@ -227,7 +228,7 @@
                     android:layout_marginStart="20dp"
                     android:gravity="center"
                     android:text="Dietary Preferences"
-                    android:textSize="16dp"
+                    android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -238,51 +239,19 @@
                     android:layout_marginEnd="20dp"
                     android:gravity="center"
                     android:onClick="toEditPreferences"
-                    android:text="Edit"
+                    android:text="@string/edit"
                     android:textColor="@color/green"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/dp_vegetarian"
-                    android:layout_width="150dp"
-                    android:layout_height="40dp"
-                    android:gravity="center"
-                    android:background="@drawable/rounded_linear_layout"
-                    android:text="Vegetarian"/>
-
-                <TextView
-                    android:id="@+id/dp_low_carb"
-                    android:layout_width="150dp"
-                    android:layout_height="40dp"
-                    android:gravity="center"
-                    android:background="@drawable/rounded_linear_layout"
-                    android:text="Low Carb" />
-
-                <TextView
-                    android:id="@+id/dp_gluten_free"
-                    android:layout_width="150dp"
-                    android:layout_height="40dp"
-                    android:gravity="center"
-                    android:background="@drawable/rounded_linear_layout"
-                    android:text="Gluten-Free"/>
-
-                <TextView
-                    android:id="@+id/dp_high_protein"
-                    android:layout_width="150dp"
-                    android:layout_height="40dp"
-                    android:gravity="center"
-                    android:background="@drawable/rounded_linear_layout"
-                    android:text="High Protein"/>
-
                 <androidx.constraintlayout.helper.widget.Flow
-                    android:id="@+id/dietary_preferences_flow"
+                    android:id="@+id/dp_flow"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     app:flow_wrapMode="aligned"
-                    app:layout_constraintTop_toBottomOf="@id/dp_title"
-                    app:constraint_referenced_ids="dp_vegetarian, dp_low_carb, dp_high_protein, dp_gluten_free"/>
+                    app:layout_constraintTop_toBottomOf="@id/dp_title"/>
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>
@@ -298,6 +267,7 @@
             app:cardCornerRadius="16dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/anr_flow_parent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
@@ -321,50 +291,10 @@
                     android:layout_marginEnd="20dp"
                     android:gravity="center"
                     android:onClick="toEditAllergies"
-                    android:text="Edit"
+                    android:text="@string/edit"
                     android:textColor="@color/green"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/anr_peanuts"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="12sp"
-                    android:gravity="center"
-                    android:textColor="@color/red"
-                    android:background="@drawable/rounded_layout_red"
-                    android:text="Peanuts"/>
-
-                <TextView
-                    android:id="@+id/anr_tree_nuts"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="12sp"
-                    android:gravity="center"
-                    android:textColor="@color/red"
-                    android:background="@drawable/rounded_layout_red"
-                    android:text="Tree Nuts" />
-
-                <TextView
-                    android:id="@+id/anr_gluten"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="12sp"
-                    android:gravity="center"
-                    android:textColor="@color/red"
-                    android:background="@drawable/rounded_layout_red"
-                    android:text="Gluten"/>
-
-                <TextView
-                    android:id="@+id/anr_dairy"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="12sp"
-                    android:gravity="center"
-                    android:textColor="@color/red"
-                    android:background="@drawable/rounded_layout_red"
-                    android:text="Dairy"/>
 
                 <androidx.constraintlayout.helper.widget.Flow
                     android:id="@+id/anr_flow"
@@ -372,9 +302,9 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     app:flow_wrapMode="aligned"
-                    app:layout_constraintTop_toBottomOf="@id/anr_title"
-                    app:constraint_referenced_ids="anr_peanuts, anr_tree_nuts, anr_gluten, anr_dairy"/>
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                    app:layout_constraintTop_toBottomOf="@id/anr_title"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>
 
