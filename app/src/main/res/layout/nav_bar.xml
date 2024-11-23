@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/nav_bar_gradient"
+    android:padding="8dp"
+    android:elevation="6dp"
+    android:layout_margin="8dp"
+    android:clipToPadding="false"
+    android:backgroundTintMode="add">
+
+    <LinearLayout
+        android:id="@+id/navHomeContainer"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:padding="8dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/nav_home"
+            android:contentDescription="@string/home" />
+
+        <TextView
+            android:id="@+id/navHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/home"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:onClick="navigateToHome"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/navMealPlannerContainer"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:padding="8dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/nav_planner"
+            android:contentDescription="@string/meal_planner" />
+
+        <TextView
+            android:id="@+id/navMealPlanner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/meal_planner"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:onClick="navigateToMealPlanner" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/navProfileContainer"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:padding="8dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/nav_profile"
+            android:contentDescription="@string/profile" />
+
+        <TextView
+            android:id="@+id/navProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/profile"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:onClick="navigateToProfile" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/navHistoryContainer"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:padding="8dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/nav_settings"
+            android:contentDescription="@string/history" />
+
+        <TextView
+            android:id="@+id/navHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/history"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:onClick="navigateToHistory" />
+    </LinearLayout>
+
+</LinearLayout>
