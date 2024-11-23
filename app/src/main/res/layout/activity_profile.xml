@@ -13,59 +13,8 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!--    Nav     -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/green"
-            android:elevation="4dp"
-            android:orientation="horizontal"
-            android:padding="10dp">
-
-            <TextView
-                android:id="@+id/navHome"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:onClick="navigateToHome"
-                android:text="@string/home"
-                android:textColor="@color/white"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/navMealPlanner"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:onClick="navigateToMealPlanner"
-                android:text="@string/meal_planner"
-                android:textColor="@color/white"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/navProfile"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:onClick="navigateToProfile"
-                android:text="@string/profile"
-                android:textColor="@color/white"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/navHistory"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:onClick="navigateToHistory"
-                android:text="@string/history"
-                android:textColor="@color/white"
-                android:textStyle="bold" />
-        </LinearLayout>
+        <include
+            layout="@layout/nav_bar" />
 
         <!-- Profile -->
         <androidx.cardview.widget.CardView
