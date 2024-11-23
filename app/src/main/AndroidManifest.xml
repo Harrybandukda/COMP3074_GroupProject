@@ -38,6 +38,12 @@
             android:exported="false" />
         <activity android:name=".MealHistoryActivity"
             android:exported="false"/>
+        <activity android:name=".EditProfileActivity"
+            android:exported="false"/>
+        <activity android:name=".EditAllergiesActivity"
+            android:exported="false"/>
+        <activity android:name=".EditDietPrefActivity"
+            android:exported="false"/>
         <activity
             android:name=".HomeActivity"
             android:exported="true">
