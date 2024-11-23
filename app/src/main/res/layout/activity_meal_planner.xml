@@ -13,54 +13,8 @@
         android:orientation="vertical"
         android:background="#F1F8E9">
 
-        <!-- Navigation Bar -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="#4CAF50"
-            android:padding="10dp">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/home"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                android:padding="8dp" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/meal_planner"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                android:padding="8dp" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/profile"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                android:padding="8dp" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/history"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                android:padding="8dp" />
-        </LinearLayout>
+        <include
+            layout="@layout/nav_bar" />
 
         <!-- Week Header -->
         <LinearLayout
