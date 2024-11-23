@@ -25,4 +25,24 @@ public class TeamActivity extends AppCompatActivity {
     }
 
 
+    // Navigation bar methods
+    public void navigateToHome(View view) {
+        Intent intent = new Intent(this, HomeActivity.class);
+        startActivity(intent);
+    }
+
+    public void navigateToMealPlanner(View view) {
+        Intent intent = new Intent(this, MealPlannerActivity.class);
+        startActivity(intent);
+    }
+
+    public void navigateToProfile(View view) {
+        Intent intent = new Intent(this, ProfileActivity.class);
+        startActivity(intent);
+    }
+
+    public void navigateToHistory(View view) {
+        Intent intent = new Intent(this, HistoryActivity.class);
+        startActivity(intent);
+    }
 }
