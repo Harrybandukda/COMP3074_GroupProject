@@ -20,7 +20,7 @@
 <table>
 <tr>
 <td style="width: 50%;">
-<img src="Screenshot/About.png" alt="About Screen" width="100%" style="border-radius: 10px;"/>
+<img src="Screenshot/About.png" alt="About Screen" width="20%" style="border-radius: 10px;"/>
 </td>
 <td style="vertical-align: top; padding-left: 20px;">
 <p style="font-size: 18px;">Provides an overview of the app, its purpose, and key features.</p>
