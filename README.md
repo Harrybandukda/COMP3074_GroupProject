@@ -14,44 +14,100 @@
 ## 📱 **Screenshots and Features**
 
 ### **1. About Screen**
-Provides an overview of the app, its purpose, and key features.  
+<table>
+<tr>
+<td>
 <img src="Screenshot/About.png" alt="About Screen" width="200"/>
+</td>
+<td>
+Provides an overview of the app, its purpose, and key features.
+</td>
+</tr>
+</table>
 
 ---
 
 ### **2. Edit Profile Screen**
-Allows users to update their personal details effortlessly.  
+<table>
+<tr>
+<td>
 <img src="Screenshot/Edit%20Profile.png" alt="Edit Profile Screen" width="200"/>
+</td>
+<td>
+Allows users to update their personal details effortlessly.
+</td>
+</tr>
+</table>
 
 ---
 
 ### **3. History Screen**
-Displays the user's previous interactions and meal plans for easy tracking.  
+<table>
+<tr>
+<td>
 <img src="Screenshot/History.png" alt="History Screen" width="200"/>
+</td>
+<td>
+Displays the user's previous interactions and meal plans for easy tracking.
+</td>
+</tr>
+</table>
 
 ---
 
 ### **4. Homepage**
-The central hub with quick access to all main features.  
+<table>
+<tr>
+<td>
 <img src="Screenshot/Homepage.png" alt="Homepage" width="200"/>
+</td>
+<td>
+The central hub with quick access to all main features.
+</td>
+</tr>
+</table>
 
 ---
 
 ### **5. Meal Plan Screen**
-Generates and showcases personalized meal plans tailored to the user's preferences.  
+<table>
+<tr>
+<td>
 <img src="Screenshot/MealPlan.png" alt="Meal Plan Screen" width="200"/>
+</td>
+<td>
+Generates and showcases personalized meal plans tailored to the user's preferences.
+</td>
+</tr>
+</table>
 
 ---
 
 ### **6. Profile Screen**
-A personalized dashboard with user details and app settings.  
+<table>
+<tr>
+<td>
 <img src="Screenshot/Profile.png" alt="Profile Screen" width="200"/>
+</td>
+<td>
+A personalized dashboard with user details and app settings.
+</td>
+</tr>
+</table>
 
 ---
 
 ### **7. Splash Screen**
-Welcomes users with an engaging startup animation for a smooth first impression.  
+<table>
+<tr>
+<td>
 <img src="Screenshot/Splash%20Screen.png" alt="Splash Screen" width="200"/>
+</td>
+<td>
+Welcomes users with an engaging startup animation for a smooth first impression.
+</td>
+</tr>
+</table>
 
 ---
 
