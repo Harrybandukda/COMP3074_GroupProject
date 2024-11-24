@@ -54,6 +54,8 @@
     <string name="mo_harry_bandukda">Mo Harry Bandukda</string>
     <string name="student_number_101451857">Student Number: 101451857</string>
     <string name="return_to_home">Return to Home</string>
+    <string name="flavorly">Flavorly</string>
+    <string name="meal_plan_app">Meal Plan App</string>
 
     <string-array name="meal_types">
         <item>All Meal Types</item>

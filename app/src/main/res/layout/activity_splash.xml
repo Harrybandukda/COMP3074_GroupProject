@@ -19,7 +19,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Flavorly"
+        android:text="@string/flavorly"
         android:textSize="40sp"
         android:textColor="@color/white"
         android:fontFamily="@font/delius_regular"
@@ -31,12 +31,13 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Meal Plan App"
+        android:text="@string/meal_plan_app"
         android:textSize="10sp"
         android:textColor="@color/white"
         android:fontFamily="@font/nunito_bold"
         android:layout_below="@id/splashLogo"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="70sp" />
+        android:layout_marginTop="70sp"
+        tools:ignore="SmallSp" />
 
 </RelativeLayout>
