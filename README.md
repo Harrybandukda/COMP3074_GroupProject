@@ -114,7 +114,7 @@ Welcomes users with an engaging startup animation for a smooth first impression.
 ## 🚀 **Current Status**
 
 - A fully functional **navigation system** ensures seamless transitions between screens.
-- The **Facebook share button** is successfully integrated and operational, enabling users to share their meal plans directly.
+- The **Facebook share button** is successfully inteegrated and operational, enabling users to share their meal plans directly.
 
 ---
 
