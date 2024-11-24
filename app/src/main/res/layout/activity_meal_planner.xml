@@ -11,7 +11,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="#F1F8E9">
+        android:background="#F1F8E9"
+        android:padding="10dp"
+        android:elevation="4dp">
 
         <!-- Navigation Bar -->
         <LinearLayout
@@ -21,45 +23,50 @@
             android:background="#4CAF50"
             android:padding="10dp">
 
+
             <TextView
+                android:id="@+id/navHome"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="@string/home"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white"
                 android:textStyle="bold"
-                android:padding="8dp" />
+                android:onClick="navigateToHome" />
 
             <TextView
+                android:id="@+id/navMealPlanner"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="@string/meal_planner"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white"
                 android:textStyle="bold"
-                android:padding="8dp" />
+                android:onClick="navigateToMealPlanner" />
 
             <TextView
+                android:id="@+id/navProfile"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="@string/profile"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white"
                 android:textStyle="bold"
-                android:padding="8dp" />
+                android:onClick="navigateToProfile" />
 
             <TextView
+                android:id="@+id/navHistory"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="@string/history"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white"
                 android:textStyle="bold"
-                android:padding="8dp" />
+                android:onClick="navigateToHistory" />
         </LinearLayout>
 
         <!-- Week Header -->
