@@ -193,13 +193,6 @@
                     android:text="Edit Profile"
                     android:onClick="toEditProfile"/>
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="@color/grey"
-                    android:text="Settings"
-                    android:onClick="toSettings"/>
-
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
