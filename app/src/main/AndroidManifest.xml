@@ -13,7 +13,10 @@
         android:theme="@style/Theme.COMP3074_GroupProject"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".TeamActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,6 +24,45 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".RecipesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RecommendationsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PreferenceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LogInActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DailyPlanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MealPlannerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MealHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditAllergiesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditDietPrefActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true" />
     </application>
 
 </manifest>
