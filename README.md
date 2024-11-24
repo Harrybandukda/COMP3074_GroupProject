@@ -1,5 +1,3 @@
----
-
 # **COMP3074 Group Project - Group 18**
 
 ## 👥 **Project Team Members**
