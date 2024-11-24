@@ -31,10 +31,6 @@ public class ProfileActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void toSettings(View view) {
-        // no setting atm
-    }
-
     public void toEditPreferences(View view) {
         Intent intent = new Intent(this, EditDietPrefActivity.class);
         startActivity(intent);

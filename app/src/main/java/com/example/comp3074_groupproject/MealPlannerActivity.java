@@ -79,8 +79,7 @@ public class MealPlannerActivity extends AppCompatActivity {
     }
 
     public void navigateToMealPlanner(View view) {
-        Intent intent = new Intent(this, MealPlannerActivity.class);
-        startActivity(intent);
+        // Do nothing, as the user is already on the Home page
     }
 
     public void navigateToProfile(View view) {
