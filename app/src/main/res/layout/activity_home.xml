@@ -1,101 +1,53 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/green"
     tools:context=".HomeActivity">
 
-    <!-- Navigation Bar -->
+    <include
+        layout="@layout/nav_bar" />
+
+    <!-- App Introduction -->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@color/green"
-        android:padding="10dp"
-        android:elevation="4dp">
-
-        <TextView
-            android:id="@+id/navHome"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="@string/home"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:onClick="navigateToHome" />
-
-        <TextView
-            android:id="@+id/navMealPlanner"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="@string/meal_planner"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:onClick="navigateToMealPlanner" />
-
-        <TextView
-            android:id="@+id/navProfile"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="@string/profile"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:onClick="navigateToProfile" />
-
-        <TextView
-            android:id="@+id/navHistory"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="@string/history"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:onClick="navigateToHistory" />
-    </LinearLayout>
-
-    <!-- App Introduction -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="270sp"
         android:gravity="center"
-        android:padding="20dp">
+        android:orientation="vertical"
+        android:padding="25sp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="@string/healthy_food_decider"
+            android:textColor="@color/white"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:textColor="@color/white"
-            android:gravity="center" />
+            android:padding="10sp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="@string/make_healthier_food_choices_effortlessly"
-            android:textSize="16sp"
-            android:textColor="@color/white"
-            android:gravity="center" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="@string/your_personal_nutrition_assistant_that_helps_you_plan_track_and_improve_your_eating_habits"
-            android:textSize="14sp"
-            android:textColor="@color/white"
             android:gravity="center"
-            android:lineSpacingExtra="2dp" />
+            android:text="@string/make_healthier_food_choices_effortlessly"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:padding="5sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:lineSpacingExtra="2dp"
+            android:text="@string/your_personal_nutrition_assistant_that_helps_you_plan_track_and_improve_your_eating_habits"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
 
         <!-- Primary Action Button -->
         <Button
@@ -104,9 +56,27 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:backgroundTint="@color/white"
-            android:padding="10dp"
+            android:padding="20dp"
             android:text="@string/start_planning_your_meals"
             android:textColor="@color/green"
             android:textStyle="bold" />
     </LinearLayout>
-</LinearLayout>
+
+    <Button
+        android:id="@+id/btnAboutTeam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/white"
+        android:drawableLeft="@drawable/about_team_blk"
+        android:drawablePadding="8dp"
+        android:padding="12dp"
+        android:text="@string/meet_the_team"
+        android:textColor="@color/green"
+        android:textStyle="bold"
+        android:onClick="navigateToTeam"/>
+
+</RelativeLayout>
