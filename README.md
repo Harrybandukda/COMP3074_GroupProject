@@ -15,43 +15,43 @@
 
 ### **1. About Screen**
 Provides an overview of the app, its purpose, and key features.  
-<img src="Screenshot/About.png" alt="About Screen" width="400"/>
+<img src="Screenshot/About.png" alt="About Screen" width="200"/>
 
 ---
 
 ### **2. Edit Profile Screen**
 Allows users to update their personal details effortlessly.  
-<img src="Screenshot/Edit%20Profile.png" alt="Edit Profile Screen" width="400"/>
+<img src="Screenshot/Edit%20Profile.png" alt="Edit Profile Screen" width="200"/>
 
 ---
 
 ### **3. History Screen**
 Displays the user's previous interactions and meal plans for easy tracking.  
-<img src="Screenshot/History.png" alt="History Screen" width="400"/>
+<img src="Screenshot/History.png" alt="History Screen" width="200"/>
 
 ---
 
 ### **4. Homepage**
 The central hub with quick access to all main features.  
-<img src="Screenshot/Homepage.png" alt="Homepage" width="400"/>
+<img src="Screenshot/Homepage.png" alt="Homepage" width="200"/>
 
 ---
 
 ### **5. Meal Plan Screen**
 Generates and showcases personalized meal plans tailored to the user's preferences.  
-<img src="Screenshot/MealPlan.png" alt="Meal Plan Screen" width="400"/>
+<img src="Screenshot/MealPlan.png" alt="Meal Plan Screen" width="200"/>
 
 ---
 
 ### **6. Profile Screen**
 A personalized dashboard with user details and app settings.  
-<img src="Screenshot/Profile.png" alt="Profile Screen" width="400"/>
+<img src="Screenshot/Profile.png" alt="Profile Screen" width="200"/>
 
 ---
 
 ### **7. Splash Screen**
 Welcomes users with an engaging startup animation for a smooth first impression.  
-<img src="Screenshot/Splash%20Screen.png" alt="Splash Screen" width="400"/>
+<img src="Screenshot/Splash%20Screen.png" alt="Splash Screen" width="200"/>
 
 ---
 
