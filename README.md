@@ -13,124 +13,108 @@
 
 ## 📱 **Screenshots and Features**
 
----
-
-<div style="border: 2px solid #4CAF50; border-radius: 10px; padding: 15px; margin: 20px 0;">
-<h2 style="color: #4CAF50; text-align: center;">1. About Screen</h2>
+### **1. About Screen**
 <table>
 <tr>
-<td style="width: 50%;">
-<img src="Screenshot/About.png" alt="About Screen" width="50%" style="border-radius: 10px;"/>
+<td>
+<img src="Screenshot/About.png" alt="About Screen" width="200"/>
 </td>
-<td style="vertical-align: top; padding-left: 20px;">
-<p style="font-size: 18px;">Provides an overview of the app, its purpose, and key features.</p>
+<td>
+Provides an overview of the app, its purpose, and key features.
 </td>
 </tr>
 </table>
-</div>
 
 ---
 
-<div style="border: 2px solid #4CAF50; border-radius: 10px; padding: 15px; margin: 20px 0;">
-<h2 style="color: #4CAF50; text-align: center;">2. Edit Profile Screen</h2>
+### **2. Edit Profile Screen**
 <table>
 <tr>
-<td style="width: 50%;">
-<img src="Screenshot/Edit%20Profile.png" alt="Edit Profile Screen" width="100%" style="border-radius: 10px;"/>
+<td>
+<img src="Screenshot/Edit%20Profile.png" alt="Edit Profile Screen" width="200"/>
 </td>
-<td style="vertical-align: top; padding-left: 20px;">
-<p style="font-size: 18px;">Allows users to update their personal details effortlessly.</p>
+<td>
+Allows users to update their personal details effortlessly.
 </td>
 </tr>
 </table>
-</div>
 
 ---
 
-<div style="border: 2px solid #4CAF50; border-radius: 10px; padding: 15px; margin: 20px 0;">
-<h2 style="color: #4CAF50; text-align: center;">3. History Screen</h2>
+### **3. History Screen**
 <table>
 <tr>
-<td style="width: 50%;">
-<img src="Screenshot/History.png" alt="History Screen" width="100%" style="border-radius: 10px;"/>
+<td>
+<img src="Screenshot/History.png" alt="History Screen" width="200"/>
 </td>
-<td style="vertical-align: top; padding-left: 20px;">
-<p style="font-size: 18px;">Displays the user's previous interactions and meal plans for easy tracking.</p>
+<td>
+Displays the user's previous interactions and meal plans for easy tracking.
 </td>
 </tr>
 </table>
-</div>
 
 ---
 
-<div style="border: 2px solid #4CAF50; border-radius: 10px; padding: 15px; margin: 20px 0;">
-<h2 style="color: #4CAF50; text-align: center;">4. Homepage</h2>
+### **4. Homepage**
 <table>
 <tr>
-<td style="width: 50%;">
-<img src="Screenshot/Homepage.png" alt="Homepage" width="100%" style="border-radius: 10px;"/>
+<td>
+<img src="Screenshot/Homepage.png" alt="Homepage" width="200"/>
 </td>
-<td style="vertical-align: top; padding-left: 20px;">
-<p style="font-size: 18px;">The central hub with quick access to all main features.</p>
+<td>
+The central hub with quick access to all main features.
 </td>
 </tr>
 </table>
-</div>
 
 ---
 
-<div style="border: 2px solid #4CAF50; border-radius: 10px; padding: 15px; margin: 20px 0;">
-<h2 style="color: #4CAF50; text-align: center;">5. Meal Plan Screen</h2>
+### **5. Meal Plan Screen**
 <table>
 <tr>
-<td style="width: 50%;">
-<img src="Screenshot/MealPlan.png" alt="Meal Plan Screen" width="100%" style="border-radius: 10px;"/>
+<td>
+<img src="Screenshot/MealPlan.png" alt="Meal Plan Screen" width="200"/>
 </td>
-<td style="vertical-align: top; padding-left: 20px;">
-<p style="font-size: 18px;">Generates and showcases personalized meal plans tailored to the user's preferences.</p>
+<td>
+Generates and showcases personalized meal plans tailored to the user's preferences.
 </td>
 </tr>
 </table>
-</div>
 
 ---
 
-<div style="border: 2px solid #4CAF50; border-radius: 10px; padding: 15px; margin: 20px 0;">
-<h2 style="color: #4CAF50; text-align: center;">6. Profile Screen</h2>
+### **6. Profile Screen**
 <table>
 <tr>
-<td style="width: 50%;">
-<img src="Screenshot/Profile.png" alt="Profile Screen" width="100%" style="border-radius: 10px;"/>
+<td>
+<img src="Screenshot/Profile.png" alt="Profile Screen" width="200"/>
 </td>
-<td style="vertical-align: top; padding-left: 20px;">
-<p style="font-size: 18px;">A personalized dashboard with user details and app settings.</p>
+<td>
+A personalized dashboard with user details and app settings.
 </td>
 </tr>
 </table>
-</div>
 
 ---
 
-<div style="border: 2px solid #4CAF50; border-radius: 10px; padding: 15px; margin: 20px 0;">
-<h2 style="color: #4CAF50; text-align: center;">7. Splash Screen</h2>
+### **7. Splash Screen**
 <table>
 <tr>
-<td style="width: 50%;">
-<img src="Screenshot/Splash%20Screen.png" alt="Splash Screen" width="100%" style="border-radius: 10px;"/>
+<td>
+<img src="Screenshot/Splash%20Screen.png" alt="Splash Screen" width="200"/>
 </td>
-<td style="vertical-align: top; padding-left: 20px;">
-<p style="font-size: 18px;">Welcomes users with an engaging startup animation for a smooth first impression.</p>
+<td>
+Welcomes users with an engaging startup animation for a smooth first impression.
 </td>
 </tr>
 </table>
-</div>
 
 ---
 
 ## 🚀 **Current Status**
 
 - A fully functional **navigation system** ensures seamless transitions between screens.
-- The **Facebook share button** is successfully integrated and operational, enabling users to share their meal plans directly.
+- The **Facebook share button** is successfully inteegrated and operational, enabling users to share their meal plans directly.
 
 ---
 
