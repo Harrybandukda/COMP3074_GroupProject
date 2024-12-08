@@ -1,5 +1,6 @@
 package com.example.comp3074_groupproject;
 
+import android.app.ProgressDialog;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -8,11 +9,23 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.content.Intent;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.comp3074_groupproject.Adapters.RandomRecipeAdapter;
+import com.example.comp3074_groupproject.Listerners.RandomRecipeListener;
+import com.example.comp3074_groupproject.Models.RandomRecipeResponse;
+
 public class MealPlannerActivity extends AppCompatActivity {
+
+    ProgressDialog dialog;
+    RequestManager manager;
+    RandomRecipeAdapter recipeAdapter;
+    RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,18 +33,12 @@ public class MealPlannerActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_meal_planner);
 
-        // Example: Open pop-up when a meal is clicked
-        findViewById(R.id.yogurt_bowl).setOnClickListener(v -> showMealDetails());
-    }
+        dialog = new ProgressDialog(this);
+        dialog.setTitle("Loading");
 
-    private void showMealDetails() {
-        MealDetailsDialogFragment dialogFragment = new MealDetailsDialogFragment(
-                "Greek Yogurt Bowl",
-                "• 1 cup Greek yogurt\n• 1/2 cup mixed berries\n• 1 tbsp honey\n• 1/4 cup granola",
-                "1. Layer yogurt in a bowl\n2. Top with berries\n3. Drizzle with honey\n4. Sprinkle granola on top",
-                "320 calories | 20g protein | 45g carbs | 8g fat"
-        );
-        dialogFragment.show(getSupportFragmentManager(), "MealDetailsDialog");
+        manager = new RequestManager(this);
+        manager.getRandomRecipes(randomRecipeResponseListener);
+        dialog.show();
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -39,6 +46,24 @@ public class MealPlannerActivity extends AppCompatActivity {
             return insets;
         });
     }
+
+    private final RandomRecipeListener randomRecipeResponseListener = new RandomRecipeListener() {
+        @Override
+        public void didFetch(RandomRecipeResponse response, String message) {
+            dialog.dismiss();
+            recyclerView = findViewById(R.id.random);
+            recyclerView.setHasFixedSize(true);
+            recyclerView.setLayoutManager(new GridLayoutManager(MealPlannerActivity.this, 1));
+            recipeAdapter = new RandomRecipeAdapter(MealPlannerActivity.this, response.recipes);
+            recyclerView.setAdapter(recipeAdapter);
+
+        }
+
+        @Override
+        public void didError(String message) {
+            Toast.makeText(MealPlannerActivity.this, message, Toast.LENGTH_SHORT).show();
+        }
+    };
 
     // Navigation between weeks
     public void previousWeek(View view) {
