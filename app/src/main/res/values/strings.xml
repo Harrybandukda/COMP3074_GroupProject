@@ -60,6 +60,8 @@
     <string name="recipes">Recipes</string>
     <string name="food_recipes_app">Food Recipes App</string>
     <string name="discover_recipes">Discover Recipes</string>
+    <string name="menu">Menu</string>
+    <string name="explore_recipes">Explore Recipes</string>
     <string-array name="meal_types">
         <item>All Meal Types</item>
         <item>Takeout</item>
@@ -81,20 +83,15 @@
     </string-array>
 
     <string-array name="tags">
-        <item>Main Course</item>
-        <item>Side Dish</item>
-        <item>Dessert</item>
-        <item>Appetizer</item>
-        <item>Salad</item>
-        <item>Bread</item>
-        <item>Breakfast</item>
-        <item>Soup</item>
-        <item>Beverage</item>
-        <item>Sauce</item>
-        <item>Marinade</item>
-        <item>Finger food</item>
-        <item>Snack</item>
-        <item>Drink</item>
+        <item>main course</item>
+        <item>soup</item>
+        <item>appetizer</item>
+        <item>salad</item>
+        <item>bread</item>
+        <item>sauce</item>
+        <item>beverage</item>
+        <item>dessert</item>
     </string-array>
+
 
 </resources>

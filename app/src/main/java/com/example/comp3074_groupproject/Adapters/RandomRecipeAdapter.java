@@ -22,6 +22,7 @@ public class RandomRecipeAdapter extends RecyclerView.Adapter<RandomRecipeViewHo
     Context context;
     List<Recipe> list;
 
+
     public RandomRecipeAdapter(Context context, List<Recipe> list) {
         this.context = context;
         this.list = list;

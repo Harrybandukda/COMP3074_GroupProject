@@ -14,18 +14,28 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.comp3074_groupproject.Adapters.RandomRecipeAdapter;
 import com.example.comp3074_groupproject.Listerners.RandomRecipeListener;
 import com.example.comp3074_groupproject.Models.RandomRecipeResponse;
 
+import java.util.ArrayList;
+import java.util.List;
+
+
+/** @noinspection deprecation*/
 public class MealPlannerActivity extends AppCompatActivity {
 
     ProgressDialog dialog;
     RequestManager manager;
     RandomRecipeAdapter recipeAdapter;
     RecyclerView recyclerView;
+    Spinner spinner;
+    List<String> tags = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,9 +46,17 @@ public class MealPlannerActivity extends AppCompatActivity {
         dialog = new ProgressDialog(this);
         dialog.setTitle("Loading");
 
+        spinner = findViewById(R.id.spinner_tag);
+        ArrayAdapter arrayAdapter = ArrayAdapter.createFromResource(
+                this,
+                R.array.tags,
+                R.layout.tag_text
+        );
+        arrayAdapter.setDropDownViewResource(R.layout.inner_tag);
+        spinner.setAdapter(arrayAdapter);
+        spinner.setOnItemSelectedListener(spinnerListener);
+
         manager = new RequestManager(this);
-        manager.getRandomRecipes(randomRecipeResponseListener);
-        dialog.show();
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -62,6 +80,21 @@ public class MealPlannerActivity extends AppCompatActivity {
         @Override
         public void didError(String message) {
             Toast.makeText(MealPlannerActivity.this, message, Toast.LENGTH_SHORT).show();
+        }
+    };
+
+    private final AdapterView.OnItemSelectedListener spinnerListener = new AdapterView.OnItemSelectedListener() {
+        @Override
+        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+            tags.clear();
+            tags.add(adapterView.getSelectedItem().toString());
+            manager.getRandomRecipes(randomRecipeResponseListener, tags);
+            dialog.show();
+        }
+
+        @Override
+        public void onNothingSelected(AdapterView<?> adapterView) {
+
         }
     };
 
