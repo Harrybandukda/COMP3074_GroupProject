@@ -45,7 +45,7 @@ The central hub with quick access to all main features, including exploring reci
 <table>
 <tr>
 <td>
-<img src="Screenshot/History.png" alt="History Screen" width="400"/>
+<img src="Screenshot/DiscoverRecipes.png" alt="History Screen" width="400"/>
 </td>
 <td>
 Discover an extensive collection of recipes, filtered by user-selected tags such as cuisine, dietary preferences, or meal type. This screen fetches real-time recipe data from the Spoonacular API and displays it using `RecyclerView` with a custom adapter. Users can browse recipes with a visually engaging layout, ensuring an intuitive and enjoyable discovery experience.
