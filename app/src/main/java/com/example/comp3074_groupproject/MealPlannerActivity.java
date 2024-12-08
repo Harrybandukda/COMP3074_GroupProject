@@ -20,6 +20,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.comp3074_groupproject.Adapters.RandomRecipeAdapter;
+import com.example.comp3074_groupproject.Listerners.DetailClickListener;
 import com.example.comp3074_groupproject.Listerners.RandomRecipeListener;
 import com.example.comp3074_groupproject.Models.RandomRecipeResponse;
 
@@ -72,7 +73,7 @@ public class MealPlannerActivity extends AppCompatActivity {
             recyclerView = findViewById(R.id.random);
             recyclerView.setHasFixedSize(true);
             recyclerView.setLayoutManager(new GridLayoutManager(MealPlannerActivity.this, 1));
-            recipeAdapter = new RandomRecipeAdapter(MealPlannerActivity.this, response.recipes);
+            recipeAdapter = new RandomRecipeAdapter(MealPlannerActivity.this, response.recipes, detailListener);
             recyclerView.setAdapter(recipeAdapter);
 
         }
@@ -98,18 +99,15 @@ public class MealPlannerActivity extends AppCompatActivity {
         }
     };
 
-    // Navigation between weeks
-    public void previousWeek(View view) {
-        Toast.makeText(this, "Previous week clicked", Toast.LENGTH_SHORT).show();
-    }
+    private final DetailClickListener detailListener = new DetailClickListener() {
+        @Override
+        public void onRecipeClicked(String id) {
+            Intent intent = new Intent(MealPlannerActivity.this, RecipeDetailsActivity.class)
+                    .putExtra("id", id);
+            startActivity(intent);
+        }
+    };
 
-    public void nextWeek(View view) {
-        Toast.makeText(this, "Next week clicked", Toast.LENGTH_SHORT).show();
-    }
-
-    public void generateNewPlan(View view) {
-        Toast.makeText(this, "Generating new plan...", Toast.LENGTH_SHORT).show();
-    }
 
     // Share buttons
     public void shareToFacebook(View view) {
