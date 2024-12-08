@@ -28,7 +28,7 @@ public class RequestManager {
         CallRandomRecipes callRandomRecipes = retrofit.create(CallRandomRecipes.class);
         Call<RandomRecipeResponse> call =
                 callRandomRecipes.callRandomRecipe(context
-                        .getString(R.string.api_key), "10" );
+                        .getString(R.string.api_key), "5" );
 
         call.enqueue(new Callback<RandomRecipeResponse>() {
             @Override
