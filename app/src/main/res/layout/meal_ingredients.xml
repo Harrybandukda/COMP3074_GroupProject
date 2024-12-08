@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/light_green"
+    app:cardElevation="8dp"
+    android:layout_margin="8dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/ingredients_quantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="10kg"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:textSize="16sp"
+            android:fontFamily="@font/dmsans_semibold"
+            android:padding="4dp"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:id="@+id/ingredient_image"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:scaleType="center" />
+
+        <TextView
+            android:id="@+id/ingredient_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Beef"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:fontFamily="@font/dmsans_semibold"
+            android:padding="4dp" />
+
+
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
