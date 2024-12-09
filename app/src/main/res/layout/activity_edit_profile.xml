@@ -9,6 +9,10 @@
     android:orientation="vertical"
     tools:context=".EditProfileActivity">
 
+    <include
+        layout="@layout/nav_bar" />
+
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
