@@ -13,112 +13,81 @@
 
 ## 📱 **Screenshots and Features**
 
-### **1. About Screen**
+### **1. Splash Screen**
 <table>
 <tr>
 <td>
-<img src="Screenshot/About.png" alt="About Screen" width="200"/>
+<img src="Screenshot/SplashScreen.png" alt="Splash" width="400"/>
 </td>
 <td>
-Provides an overview of the app, its purpose, and key features.
+Welcomes users with an engaging startup animation for a smooth first impression. The splash screen sets the tone for the app with its minimalist design and seamless transition into the homepage, ensuring users feel invited from the moment they open the app.
 </td>
 </tr>
 </table>
 
 ---
 
-### **2. Edit Profile Screen**
+### **2. Homepage**
 <table>
 <tr>
 <td>
-<img src="Screenshot/Edit%20Profile.png" alt="Edit Profile Screen" width="200"/>
+<img src="Screenshot/HomePage.png" alt="HomePage" width="400"/>
 </td>
 <td>
-Allows users to update their personal details effortlessly.
+The central hub with quick access to all main features, including exploring recipes, managing meal plans, and checking your profile or history. Users can discover a variety of recipes tailored to their preferences and search using tags for specific cuisines or meal types. Powered by the Spoonacular API, the homepage provides a dynamic, real-time feed of trending recipes and meal ideas.
 </td>
 </tr>
 </table>
 
 ---
 
-### **3. History Screen**
+### **3. Discover Recipes Screen**
 <table>
 <tr>
 <td>
-<img src="Screenshot/History.png" alt="History Screen" width="200"/>
+<img src="Screenshot/DiscoverRecipes.png" alt="History Screen" width="400"/>
 </td>
 <td>
-Displays the user's previous interactions and meal plans for easy tracking.
+Discover an extensive collection of recipes, filtered by user-selected tags such as cuisine, dietary preferences, or meal type. This screen fetches real-time recipe data from the Spoonacular API and displays it using `RecyclerView` with a custom adapter. Users can browse recipes with a visually engaging layout, ensuring an intuitive and enjoyable discovery experience.
 </td>
 </tr>
 </table>
 
 ---
 
-### **4. Homepage**
+### **4. Search Tag**
 <table>
 <tr>
 <td>
-<img src="Screenshot/Homepage.png" alt="Homepage" width="200"/>
+<img src="Screenshot/SearchTags.png" alt="SearchTags" width="400"/>
 </td>
 <td>
-The central hub with quick access to all main features.
+Search tags provide an organized way for users to find recipes based on categories like breakfast, vegetarian, keto, and more. The app uses a user-friendly `Spinner` dropdown menu for selecting tags, which then sends the query to the Spoonacular API via Retrofit. The result is a smooth and interactive search experience that quickly connects users to their desired recipes.
 </td>
 </tr>
 </table>
 
 ---
 
-### **5. Meal Plan Screen**
+### **5. Recipes Details**
 <table>
 <tr>
 <td>
-<img src="Screenshot/MealPlan.png" alt="Meal Plan Screen" width="200"/>
+<img src="Screenshot/ReciepesDetails.png" alt="ReciepesDetails" width="400"/>
 </td>
 <td>
-Generates and showcases personalized meal plans tailored to the user's preferences.
+Provides comprehensive details about each recipe, including ingredients, cooking instructions, nutritional information, and the recipe's author. This screen is powered by the Spoonacular API, with data fetched using Retrofit and displayed dynamically through a `RecyclerView.Adapter`. It ensures users have all the information they need to prepare their favorite meals, complete with step-by-step instructions and visual aids.
 </td>
 </tr>
 </table>
 
 ---
 
-### **6. Profile Screen**
-<table>
-<tr>
-<td>
-<img src="Screenshot/Profile.png" alt="Profile Screen" width="200"/>
-</td>
-<td>
-A personalized dashboard with user details and app settings.
-</td>
-</tr>
-</table>
+## 🔧 **Project Overview**
 
----
+This is our first prototype as instructed by the project guidelines for our capstone. In our final capstone project, we will use this as a base and implement even more functionality to the app. Planned features include:
+- Allowing users to choose specific recipes for their personalized meal plans.
+- Automatically generating meal plans based on tags and user preferences like dietary restrictions, calorie goals, or favorite ingredients.
+- Adding an innovative "Fridge Scanner" feature where users can scan the contents of their fridge to generate recipes using available ingredients.
 
-### **7. Splash Screen**
-<table>
-<tr>
-<td>
-<img src="Screenshot/Splash%20Screen.png" alt="Splash Screen" width="200"/>
-</td>
-<td>
-Welcomes users with an engaging startup animation for a smooth first impression.
-</td>
-</tr>
-</table>
-
----
-
-## 🚀 **Current Status**
-
-- A fully functional **navigation system** ensures seamless transitions between screens.
-- The **Facebook share button** is successfully inteegrated and operational, enabling users to share their meal plans directly.
-
----
-
-> **📌 Note to Professor:**  
-> This project demonstrates our commitment to delivering a feature-rich and user-friendly app. Future updates are planned to enhance its functionality further.
-
----
+This prototype lays the foundation for our vision, with dynamic data fetching and an intuitive UI already in place. Stay tuned for more updates as we continue to enhance the app! 🚀

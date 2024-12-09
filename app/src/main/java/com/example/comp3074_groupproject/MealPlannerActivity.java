@@ -14,31 +14,55 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.comp3074_groupproject.Adapters.RandomRecipeAdapter;
+import com.example.comp3074_groupproject.Listerners.DetailClickListener;
 import com.example.comp3074_groupproject.Listerners.RandomRecipeListener;
 import com.example.comp3074_groupproject.Models.RandomRecipeResponse;
 
+import java.util.ArrayList;
+import java.util.List;
+
+
+/** @noinspection deprecation*/
 public class MealPlannerActivity extends AppCompatActivity {
 
     ProgressDialog dialog;
     RequestManager manager;
     RandomRecipeAdapter recipeAdapter;
     RecyclerView recyclerView;
+    Spinner spinner;
+    List<String> tags = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_meal_planner);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.edit_profile_layout), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
 
         dialog = new ProgressDialog(this);
         dialog.setTitle("Loading");
 
+        spinner = findViewById(R.id.spinner_tag);
+        ArrayAdapter arrayAdapter = ArrayAdapter.createFromResource(
+                this,
+                R.array.tags,
+                R.layout.tag_text
+        );
+        arrayAdapter.setDropDownViewResource(R.layout.inner_tag);
+        spinner.setAdapter(arrayAdapter);
+        spinner.setOnItemSelectedListener(spinnerListener);
+
         manager = new RequestManager(this);
-        manager.getRandomRecipes(randomRecipeResponseListener);
-        dialog.show();
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -54,7 +78,7 @@ public class MealPlannerActivity extends AppCompatActivity {
             recyclerView = findViewById(R.id.random);
             recyclerView.setHasFixedSize(true);
             recyclerView.setLayoutManager(new GridLayoutManager(MealPlannerActivity.this, 1));
-            recipeAdapter = new RandomRecipeAdapter(MealPlannerActivity.this, response.recipes);
+            recipeAdapter = new RandomRecipeAdapter(MealPlannerActivity.this, response.recipes, detailListener);
             recyclerView.setAdapter(recipeAdapter);
 
         }
@@ -65,18 +89,30 @@ public class MealPlannerActivity extends AppCompatActivity {
         }
     };
 
-    // Navigation between weeks
-    public void previousWeek(View view) {
-        Toast.makeText(this, "Previous week clicked", Toast.LENGTH_SHORT).show();
-    }
+    private final AdapterView.OnItemSelectedListener spinnerListener = new AdapterView.OnItemSelectedListener() {
+        @Override
+        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+            tags.clear();
+            tags.add(adapterView.getSelectedItem().toString());
+            manager.getRandomRecipes(randomRecipeResponseListener, tags);
+            dialog.show();
+        }
 
-    public void nextWeek(View view) {
-        Toast.makeText(this, "Next week clicked", Toast.LENGTH_SHORT).show();
-    }
+        @Override
+        public void onNothingSelected(AdapterView<?> adapterView) {
 
-    public void generateNewPlan(View view) {
-        Toast.makeText(this, "Generating new plan...", Toast.LENGTH_SHORT).show();
-    }
+        }
+    };
+
+    private final DetailClickListener detailListener = new DetailClickListener() {
+        @Override
+        public void onRecipeClicked(String id) {
+            Intent intent = new Intent(MealPlannerActivity.this, RecipeDetailsActivity.class)
+                    .putExtra("id", id);
+            startActivity(intent);
+        }
+    };
+
 
     // Share buttons
     public void shareToFacebook(View view) {

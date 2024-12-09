@@ -20,7 +20,8 @@
         android:clickable="true"
         android:focusable="true"
         android:foreground="?attr/selectableItemBackground"
-        android:padding="8dp">
+        android:padding="8dp"
+        android:onClick="navigateToHome">
 
         <ImageView
             android:layout_width="24dp"
@@ -37,7 +38,7 @@
             android:textColor="@color/white"
             android:textStyle="bold"
             android:textSize="12sp"
-            android:onClick="navigateToHome"/>
+            />
     </LinearLayout>
 
     <LinearLayout
@@ -50,7 +51,8 @@
         android:clickable="true"
         android:focusable="true"
         android:foreground="?attr/selectableItemBackground"
-        android:padding="8dp">
+        android:padding="8dp"
+        android:onClick="navigateToMealPlanner">
 
         <ImageView
             android:layout_width="24dp"
@@ -63,11 +65,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@string/meal_planner"
+            android:text="@string/recipes"
             android:textColor="@color/white"
             android:textStyle="bold"
             android:textSize="12sp"
-            android:onClick="navigateToMealPlanner" />
+             />
     </LinearLayout>
 
     <LinearLayout
@@ -80,7 +82,8 @@
         android:clickable="true"
         android:focusable="true"
         android:foreground="?attr/selectableItemBackground"
-        android:padding="8dp">
+        android:padding="8dp"
+        android:onClick="navigateToProfile" >
 
         <ImageView
             android:layout_width="24dp"
@@ -97,37 +100,7 @@
             android:textColor="@color/white"
             android:textStyle="bold"
             android:textSize="12sp"
-            android:onClick="navigateToProfile" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/navHistoryContainer"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:clickable="true"
-        android:focusable="true"
-        android:foreground="?attr/selectableItemBackground"
-        android:padding="8dp">
-
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@drawable/nav_settings"
-            android:contentDescription="@string/history" />
-
-        <TextView
-            android:id="@+id/navHistory"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/history"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:textSize="12sp"
-            android:onClick="navigateToHistory" />
+             />
     </LinearLayout>
 
 </LinearLayout>

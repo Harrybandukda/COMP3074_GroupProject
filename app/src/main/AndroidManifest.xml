@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.comp3074_groupproject">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"
+    />
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -14,6 +20,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.COMP3074_GroupProject"
         tools:targetApi="31">
+        <activity
+            android:name=".RecipeDetailsActivity"
+            android:exported="false" />
         <activity
             android:name=".TeamActivity"
             android:exported="false" />

@@ -13,9 +13,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <include
-            layout="@layout/nav_bar" />
-
         <!-- Profile -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -45,23 +42,24 @@
                         android:id="@+id/avatar"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
+                        android:contentDescription="@string/placeholder"
                         android:scaleType="fitXY"
                         android:src="@drawable/avatar"/>
 
-                    </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
                 <TextView
+                    android:id="@+id/display_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Full Name"
                     android:layout_marginTop="12sp"
                     android:textStyle="bold"
                     android:textSize="18sp"/>
 
                 <TextView
+                    android:id="@+id/display_member_since"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Member since 2024"/>
+                    android:layout_height="wrap_content" />
 
                 <!-- Separator -->
                 <View
@@ -76,18 +74,24 @@
                     android:orientation="horizontal"
                     android:paddingStart="20dp"
                     android:paddingEnd="20dp">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Height"/>
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="0dp"
+                        android:text="@string/height" />
 
                     <TextView
                         android:id="@+id/profile_height"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
                         android:layout_alignParentEnd="true"
-                        android:text="5'11"
-                        android:textStyle="bold" />
+                        android:layout_marginTop="0dp"
+                        android:textStyle="bold"
+                        tools:ignore="RelativeOverlap" />
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -96,17 +100,24 @@
                     android:orientation="horizontal"
                     android:paddingStart="20dp"
                     android:paddingEnd="20dp">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Weight"/>
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="0dp"
+                        android:text="@string/weight" />
+
                     <TextView
                         android:id="@+id/profile_weight"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="135 lbs"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="0dp"
                         android:textStyle="bold"
-                        android:layout_alignParentEnd="true"/>
+                        tools:ignore="RelativeOverlap" />
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -115,17 +126,24 @@
                     android:orientation="horizontal"
                     android:paddingStart="20dp"
                     android:paddingEnd="20dp">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Activity Level"/>
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="0dp"
+                        android:text="@string/activity_level" />
+
                     <TextView
                         android:id="@+id/profile_activity_level"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Moderate"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="0dp"
                         android:textStyle="bold"
-                        android:layout_alignParentEnd="true"/>
+                        tools:ignore="RelativeOverlap" />
                 </RelativeLayout>
 
                 <!-- Separator -->
@@ -139,7 +157,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/green"
-                    android:text="Edit Profile"
+                    android:text="@string/edit_profile"
                     android:onClick="toEditProfile"/>
 
             </LinearLayout>
@@ -157,6 +175,7 @@
             app:cardCornerRadius="16dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/dp_flow_parent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
@@ -168,8 +187,8 @@
                     android:layout_height="60dp"
                     android:layout_marginStart="20dp"
                     android:gravity="center"
-                    android:text="Dietary Preferences"
-                    android:textSize="16dp"
+                    android:text="@string/dietary_preferences"
+                    android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -180,51 +199,19 @@
                     android:layout_marginEnd="20dp"
                     android:gravity="center"
                     android:onClick="toEditPreferences"
-                    android:text="Edit"
+                    android:text="@string/edit"
                     android:textColor="@color/green"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/dp_vegetarian"
-                    android:layout_width="150dp"
-                    android:layout_height="40dp"
-                    android:gravity="center"
-                    android:background="@drawable/rounded_linear_layout"
-                    android:text="Vegetarian"/>
-
-                <TextView
-                    android:id="@+id/dp_low_carb"
-                    android:layout_width="150dp"
-                    android:layout_height="40dp"
-                    android:gravity="center"
-                    android:background="@drawable/rounded_linear_layout"
-                    android:text="Low Carb" />
-
-                <TextView
-                    android:id="@+id/dp_gluten_free"
-                    android:layout_width="150dp"
-                    android:layout_height="40dp"
-                    android:gravity="center"
-                    android:background="@drawable/rounded_linear_layout"
-                    android:text="Gluten-Free"/>
-
-                <TextView
-                    android:id="@+id/dp_high_protein"
-                    android:layout_width="150dp"
-                    android:layout_height="40dp"
-                    android:gravity="center"
-                    android:background="@drawable/rounded_linear_layout"
-                    android:text="High Protein"/>
-
                 <androidx.constraintlayout.helper.widget.Flow
-                    android:id="@+id/dietary_preferences_flow"
+                    android:id="@+id/dp_flow"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     app:flow_wrapMode="aligned"
-                    app:layout_constraintTop_toBottomOf="@id/dp_title"
-                    app:constraint_referenced_ids="dp_vegetarian, dp_low_carb, dp_high_protein, dp_gluten_free"/>
+                    app:layout_constraintTop_toBottomOf="@id/dp_title"/>
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>
@@ -240,6 +227,7 @@
             app:cardCornerRadius="16dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/anr_flow_parent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
@@ -251,7 +239,7 @@
                     android:layout_height="60dp"
                     android:layout_marginStart="20dp"
                     android:gravity="center"
-                    android:text="Allergies &amp; Restrictions"
+                    android:text="@string/allergies_amp_restrictions"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
@@ -263,50 +251,10 @@
                     android:layout_marginEnd="20dp"
                     android:gravity="center"
                     android:onClick="toEditAllergies"
-                    android:text="Edit"
+                    android:text="@string/edit"
                     android:textColor="@color/green"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/anr_peanuts"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="12sp"
-                    android:gravity="center"
-                    android:textColor="@color/red"
-                    android:background="@drawable/rounded_layout_red"
-                    android:text="Peanuts"/>
-
-                <TextView
-                    android:id="@+id/anr_tree_nuts"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="12sp"
-                    android:gravity="center"
-                    android:textColor="@color/red"
-                    android:background="@drawable/rounded_layout_red"
-                    android:text="Tree Nuts" />
-
-                <TextView
-                    android:id="@+id/anr_gluten"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="12sp"
-                    android:gravity="center"
-                    android:textColor="@color/red"
-                    android:background="@drawable/rounded_layout_red"
-                    android:text="Gluten"/>
-
-                <TextView
-                    android:id="@+id/anr_dairy"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="12sp"
-                    android:gravity="center"
-                    android:textColor="@color/red"
-                    android:background="@drawable/rounded_layout_red"
-                    android:text="Dairy"/>
 
                 <androidx.constraintlayout.helper.widget.Flow
                     android:id="@+id/anr_flow"
@@ -314,8 +262,8 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     app:flow_wrapMode="aligned"
-                    app:layout_constraintTop_toBottomOf="@id/anr_title"
-                    app:constraint_referenced_ids="anr_peanuts, anr_tree_nuts, anr_gluten, anr_dairy"/>
+                    app:layout_constraintTop_toBottomOf="@id/anr_title"/>
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>

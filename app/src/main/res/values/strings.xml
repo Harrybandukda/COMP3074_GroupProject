@@ -15,7 +15,7 @@
     <string name="recipes_screen" />
     <string name="recommendations_screen" />
     <string name="summary_screen" />
-    <string name="search_meals">Search meals...</string>
+    <string name="search_meals">Search meals…</string>
     <string name="monday">Monday</string>
     <string name="breakfast_ngreek_yogurt_bowl_n320_cal">Breakfast\nGreek Yogurt Bowl\n320 cal</string>
     <string name="lunch_nquinoa_salad_n450_cal">Lunch\nQuinoa Salad\n450 cal</string>
@@ -55,11 +55,26 @@
     <string name="return_to_home">Return to Home</string>
     <string name="flavorly">Flavorly</string>
     <string name="meal_plan_app">Meal Plan App</string>
+    <string name="member_since">Member since</string>
+    <string name="avatar">avatar</string>
+    <string name="height">Height</string>
+    <string name="in">in</string>
+    <string name="ft">ft</string>
+    <string name="weight">Weight</string>
+    <string name="lb">lb</string>
+    <string name="activity_level">Activity Level</string>
+    <string name="save">Save</string>
+    <string name="dietary_preferences">Dietary Preferences</string>
+    <string name="edit">Edit</string>
+    <string name="allergies_amp_restrictions"><![CDATA[Allergies & Restrictions]]></string>
+    <string name="edit_profile">Edit Profile</string>
 
     <string name="api_key">0df6da35c1e94bb38eb9f5e97a97d2ae</string>
     <string name="recipes">Recipes</string>
     <string name="food_recipes_app">Food Recipes App</string>
     <string name="discover_recipes">Discover Recipes</string>
+    <string name="menu">Menu</string>
+    <string name="explore_recipes">Explore Recipes</string>
     <string-array name="meal_types">
         <item>All Meal Types</item>
         <item>Takeout</item>
@@ -80,21 +95,41 @@
         <item>Low</item>
     </string-array>
 
-    <string-array name="tags">
-        <item>Main Course</item>
-        <item>Side Dish</item>
-        <item>Dessert</item>
-        <item>Appetizer</item>
-        <item>Salad</item>
-        <item>Bread</item>
-        <item>Breakfast</item>
-        <item>Soup</item>
-        <item>Beverage</item>
-        <item>Sauce</item>
-        <item>Marinade</item>
-        <item>Finger food</item>
-        <item>Snack</item>
-        <item>Drink</item>
+    <string-array name="diet_pref_string">
+        <item>Vegetarian</item>
+        <item>Vegan</item>
+        <item>Pescatarian</item>
+        <item>Kosher</item>
+        <item>Halal</item>
+        <item>Gluten-Free</item>
+        <item>Low-Carb</item>
+        <item>Keto</item>
+        <item>Paleo</item>
+        <item>Raw Food</item>
     </string-array>
 
+    <!-- String array for common food allergies -->
+    <string-array name="allergies_string">
+        <item>Peanuts</item>
+        <item>Tree Nuts</item>
+        <item>Dairy</item>
+        <item>Eggs</item>
+        <item>Wheat</item>
+        <item>Soy</item>
+        <item>Fish</item>
+        <item>Shellfish</item>
+        <item>Sesame</item>
+        <item>Gluten</item>
+    </string-array>
+
+    <string-array name="tags">
+        <item>main course</item>
+        <item>soup</item>
+        <item>appetizer</item>
+        <item>salad</item>
+        <item>bread</item>
+        <item>sauce</item>
+        <item>beverage</item>
+        <item>dessert</item>
+    </string-array>
 </resources>

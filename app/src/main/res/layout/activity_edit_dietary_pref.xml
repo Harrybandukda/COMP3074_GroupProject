@@ -30,7 +30,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:gravity="center"
-                android:text="Dietary Preferences"
+                android:text="@string/dietary_preferences"
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
@@ -45,7 +45,7 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/green"
                 android:onClick="toSave"
-                android:text="Save" />
+                android:text="@string/save" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </LinearLayout>
