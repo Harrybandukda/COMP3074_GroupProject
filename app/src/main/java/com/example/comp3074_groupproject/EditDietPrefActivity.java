@@ -3,10 +3,8 @@ package com.example.comp3074_groupproject;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
-import android.widget.ListView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,14 +12,18 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.comp3074_groupproject.database.DatabaseHelper;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class EditDietPrefActivity extends AppCompatActivity {
 
-    private final String[] dietPref = {
-            "Vegetarian",
-            "Low Carb",
-            "High Protein",
-            "Gluten-Free"
-    };
+    private String[] stringDietPref;
+    private String[] userDietPref;
+    private final int userId = 1;
+    private DatabaseHelper dbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,23 +36,32 @@ public class EditDietPrefActivity extends AppCompatActivity {
             return insets;
         });
 
+        // Get user prefs
+        stringDietPref = getResources().getStringArray(R.array.diet_pref_string);
+        dbHelper = new DatabaseHelper(this);
+        userDietPref = dbHelper.getDietPrefByUserId(userId);
+        List<String> listUserDietPref = new ArrayList<>(Arrays.asList(userDietPref));
+
         LinearLayout list = findViewById(R.id.dp_list);
 
-        for(String s: dietPref){
-            CheckBox temp = new CheckBox(this);
-            temp.setText(s);
-            temp.setOnClickListener(new View.OnClickListener(){
-                @Override
-                public void onClick(View v){
-                    // Save to somewhere so the profile is updated
+        for(String s: stringDietPref){
+            CheckBox checkBox = new CheckBox(this);
+            checkBox.setText(s);
+            checkBox.setChecked(listUserDietPref.contains(s));
+
+            checkBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
+                if (isChecked) {
+                    dbHelper.addDietPreference(userId, s);
+                } else {
+                    dbHelper.deleteDietPreference(userId);
                 }
             });
-
-            list.addView(temp);
+            list.addView(checkBox);
         }
     }
 
     public void toSave(View view) {
+        dbHelper.close();
         Intent intent = new Intent(this, ProfileActivity.class);
         startActivity(intent);
     }
